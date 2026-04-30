@@ -1,0 +1,78 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fondo general */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Tarjeta */
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 300px;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover efecto */
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+  }
+  
+  /* Título */
+  .card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  /* Texto */
+  .card p {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  /* Botón */
+  .card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #00c9ff;
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  /* Hover botón */
+  .card button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  /* Modo oscuro automático */
+  @media (prefers-color-scheme: light) {
+    body {
+      background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    }
+  
+    .card {
+      color: #000;
+      background: rgba(255, 255, 255, 0.7);
+    }
+  }
